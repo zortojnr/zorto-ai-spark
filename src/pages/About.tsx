@@ -1,9 +1,13 @@
-
-import React, { useState } from 'react';
-import { Code, Database, Brain, Zap, User, MapPin } from 'lucide-react';
+import React, { useState, useEffect } from 'react';
+import { Code, Database, Brain, Zap, User, MapPin, Sparkles } from 'lucide-react';
 
 const About = () => {
   const [activeTab, setActiveTab] = useState('what-i-do');
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    setIsVisible(true);
+  }, []);
 
   const skills = {
     'what-i-do': [
@@ -48,61 +52,67 @@ const About = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-black relative">
-      {/* Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+    <div className="min-h-screen bg-gray-950 relative">
+      {/* Enhanced Grid Overlay */}
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(147,51,234,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(147,51,234,0.08)_1px,transparent_1px)] bg-[size:60px_60px]" />
+      
+      {/* Enhanced Gradient Orbs */}
+      <div className="absolute top-20 left-20 w-96 h-96 bg-purple-600/20 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 right-20 w-96 h-96 bg-blue-600/15 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }} />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column - Profile */}
-          <div>
+          <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
             <div className="mb-8">
               <h1 className="text-5xl md:text-6xl font-bold mb-6">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-400">
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-purple-400 to-pink-400">
                   About Me
                 </span>
               </h1>
               
-              <div className="inline-flex items-center px-4 py-2 bg-green-500/20 border border-green-500/30 rounded-full text-green-300 text-sm mb-8">
-                <div className="w-2 h-2 bg-green-400 rounded-full mr-2 animate-pulse" />
+              <div className="inline-flex items-center px-6 py-3 bg-gradient-to-r from-green-600/30 to-emerald-600/30 border border-green-500/50 rounded-full text-green-300 text-sm mb-8 backdrop-blur-sm hover:from-green-600/40 hover:to-emerald-600/40 transition-all duration-300">
+                <div className="w-2 h-2 bg-green-400 rounded-full mr-3 animate-pulse" />
+                <Sparkles className="w-4 h-4 mr-2" />
                 Available for Work
               </div>
             </div>
 
             {/* Profile Image */}
-            <div className="relative mb-8">
-              <div className="w-64 h-64 rounded-2xl border border-white/10 overflow-hidden mx-auto lg:mx-0">
+            <div className={`relative mb-8 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.2s' }}>
+              <div className="w-64 h-64 rounded-2xl border-2 border-purple-500/30 overflow-hidden mx-auto lg:mx-0 hover:border-purple-400/50 transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/20">
                 <img 
                   src="/lovable-uploads/29af58c9-a9ce-4589-9e3a-bcb265ee97e3.png" 
                   alt="Zorto Richard Profile" 
                   className="w-full h-full object-cover"
                 />
               </div>
-              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-purple-500/20 rounded-full blur-xl" />
+              <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-gradient-to-r from-purple-500/30 to-pink-500/30 rounded-full blur-xl animate-pulse" />
+              <div className="absolute -top-4 -left-4 w-16 h-16 bg-gradient-to-r from-blue-500/20 to-purple-500/20 rounded-full blur-xl animate-pulse" style={{ animationDelay: '1s' }} />
             </div>
 
             {/* Location */}
-            <div className="flex items-center text-white/70 mb-8">
-              <MapPin className="w-5 h-5 mr-2" />
+            <div className={`flex items-center text-gray-300 mb-8 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.4s' }}>
+              <MapPin className="w-5 h-5 mr-2 text-purple-400" />
               Lagos, Nigeria
             </div>
 
             {/* Bio */}
-            <div className="prose prose-invert max-w-none">
-              <p className="text-lg text-white/80 leading-relaxed mb-6">
-                I'm <span className="text-purple-400 font-semibold">Zorto Richard</span>, an AI Software Developer with 4 years of experience in building full-stack systems enhanced with artificial intelligence.
+            <div className={`prose prose-invert max-w-none transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.6s' }}>
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
+                I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-400 font-semibold">Zorto Richard</span>, an AI Software Developer with 4 years of experience in building full-stack systems enhanced with artificial intelligence.
               </p>
-              <p className="text-lg text-white/80 leading-relaxed mb-6">
+              <p className="text-lg text-gray-300 leading-relaxed mb-6">
                 I specialize in creating real-time tools across health, education, and productivity sectors, focusing on seamless AI integration that enhances user experiences and solves complex problems.
               </p>
-              <p className="text-lg text-white/80 leading-relaxed">
+              <p className="text-lg text-gray-300 leading-relaxed">
                 My approach combines technical excellence with user-centered design, ensuring that every solution is not just functional, but intuitive and impactful.
               </p>
             </div>
           </div>
 
           {/* Right Column - Skills */}
-          <div>
+          <div className={`transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.8s' }}>
             <h2 className="text-3xl font-bold mb-8 text-white">Skills & Expertise</h2>
             
             {/* Tab Navigation */}
@@ -115,8 +125,8 @@ const About = () => {
                     onClick={() => setActiveTab(tab.id)}
                     className={`inline-flex items-center px-4 py-2 rounded-lg font-medium transition-all duration-300 ${
                       activeTab === tab.id
-                        ? 'bg-purple-600 text-white'
-                        : 'bg-white/10 text-white/70 hover:bg-white/20'
+                        ? 'bg-gradient-to-r from-purple-600 to-pink-600 text-white shadow-lg shadow-purple-500/25'
+                        : 'bg-gradient-to-r from-gray-800/50 to-gray-900/50 text-gray-300 hover:from-purple-600/20 hover:to-pink-600/20 hover:text-white border border-purple-500/20 hover:border-purple-400/50'
                     }`}
                   >
                     <IconComponent className="w-4 h-4 mr-2" />
@@ -131,30 +141,33 @@ const About = () => {
               {skills[activeTab as keyof typeof skills].map((skill, index) => (
                 <div
                   key={skill}
-                  className="p-4 bg-white/5 border border-white/10 rounded-lg hover:border-purple-500/50 transition-all duration-300 group"
+                  className={`p-4 bg-gradient-to-br from-gray-900/50 to-gray-800/50 border border-purple-500/20 rounded-lg hover:border-purple-400/50 transition-all duration-500 group hover:scale-105 hover:shadow-lg hover:shadow-purple-500/20 backdrop-blur-sm ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}
                   style={{
-                    animationDelay: `${index * 100}ms`
+                    transitionDelay: `calc(1s + ${index * 100}ms)`
                   }}
                 >
                   <div className="flex items-center">
-                    <Zap className="w-4 h-4 text-purple-400 mr-3 opacity-60 group-hover:opacity-100 transition-opacity" />
-                    <span className="text-white/90 font-medium">{skill}</span>
+                    <Zap className="w-4 h-4 text-purple-400 mr-3 opacity-60 group-hover:opacity-100 transition-all duration-300 group-hover:text-purple-300" />
+                    <span className="text-gray-200 font-medium group-hover:text-white transition-colors duration-300">{skill}</span>
                   </div>
                 </div>
               ))}
             </div>
 
             {/* Contact CTA */}
-            <div className="mt-12 p-6 bg-gradient-to-r from-purple-500/20 to-blue-500/20 border border-purple-500/30 rounded-xl">
-              <h3 className="text-xl font-semibold mb-2">Let's Work Together</h3>
-              <p className="text-white/70 mb-4">
+            <div className={`mt-12 p-6 bg-gradient-to-r from-purple-600/20 via-pink-600/20 to-blue-600/20 border-2 border-purple-500/50 rounded-xl backdrop-blur-sm hover:border-purple-400/70 hover:shadow-xl hover:shadow-purple-500/20 transition-all duration-500 hover:scale-105 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '1.2s' }}>
+              <h3 className="text-xl font-semibold mb-2 text-white">Let's Work Together</h3>
+              <p className="text-gray-300 mb-4">
                 Interested in collaborating or have a project in mind? I'm always open to discussing new opportunities.
               </p>
               <a
                 href="/contact"
-                className="inline-flex items-center px-6 py-3 bg-purple-600 hover:bg-purple-700 text-white rounded-lg font-medium transition-colors"
+                className="group relative inline-flex items-center px-6 py-3 bg-gradient-to-r from-purple-600 via-pink-600 to-blue-600 text-white rounded-lg font-medium transition-all duration-500 hover:scale-105 hover:shadow-xl hover:shadow-purple-500/40 overflow-hidden"
               >
-                Get In Touch
+                <div className="absolute inset-0 bg-gradient-to-r from-purple-700 via-pink-700 to-blue-700 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] group-hover:animate-pulse" />
+                <span className="relative z-10">Get In Touch</span>
+                <Sparkles className="w-4 h-4 ml-2 relative z-10 animate-pulse" />
               </a>
             </div>
           </div>
