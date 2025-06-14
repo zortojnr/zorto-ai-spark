@@ -73,15 +73,13 @@ const Work = () => {
               style={{ transitionDelay: `${index * 0.2}s` }}
             >
               <div className="grid lg:grid-cols-2 gap-0">
-                {/* Image - Standardized size */}
-                <div className="relative overflow-hidden bg-gradient-to-br from-gray-900/50 to-gray-800/50 flex items-center justify-center h-80 lg:h-96">
-                  <div className="w-48 h-48 flex items-center justify-center">
-                    <img
-                      src={project.image}
-                      alt={project.title}
-                      className="max-w-full max-h-full object-contain"
-                    />
-                  </div>
+                {/* Image - Properly sized to fill the box */}
+                <div className="relative overflow-hidden bg-gradient-to-br from-gray-900/50 to-gray-800/50 h-80 lg:h-96">
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                    className="w-full h-full object-cover object-center"
+                  />
                   <div className="absolute inset-0 bg-gradient-to-r from-gray-900/60 via-transparent to-transparent" />
                   
                   {project.status === 'coming-soon' && (
