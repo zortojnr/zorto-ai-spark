@@ -22,8 +22,13 @@ const Navigation = () => {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-black/80 backdrop-blur-md border-b border-white/10">
         <div className="max-w-7xl mx-auto px-6 py-4">
           <div className="flex items-center justify-between">
-            <Link to="/" className="text-white font-bold text-xl">
-              Zorto Richard
+            <Link to="/" className="flex items-center space-x-3">
+              <img 
+                src="/lovable-uploads/2aa67e2f-4b13-4ffa-b05c-772059ed5c3d.png" 
+                alt="Zorto Richard Logo" 
+                className="w-8 h-8 rounded-lg"
+              />
+              <span className="text-white font-bold text-xl">Zorto Richard</span>
             </Link>
             
             {/* Desktop Menu */}

@@ -18,7 +18,7 @@ const Work = () => {
       id: 2,
       title: "Calorie Tracker AI",
       description: "Image recognition-based nutrition system with fitness API integration for personalized health tracking.",
-      image: "https://images.unsplash.com/photo-1518770660439-4636190af475?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3440&q=80",
+      image: "/lovable-uploads/804925b6-2a61-4779-84a5-6e239cbfe4c8.png",
       tech: ["TensorFlow", "Computer Vision", "Node.js", "MongoDB", "React Native"],
       status: "completed",
       github: "#",
@@ -28,7 +28,7 @@ const Work = () => {
       id: 3,
       title: "EduPrompt",
       description: "AI tutor using user behavior analytics to personalize learning content and optimize educational outcomes.",
-      image: "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3440&q=80",
+      image: "/lovable-uploads/bf649ee6-ce19-4986-b881-e37e67a762bd.png",
       tech: ["LangChain", "Pinecone", "Next.js", "Supabase", "Tailwind CSS"],
       status: "completed",
       github: "#",
@@ -63,11 +63,15 @@ const Work = () => {
             >
               <div className="grid lg:grid-cols-2 gap-0">
                 {/* Image */}
-                <div className="relative overflow-hidden aspect-video lg:aspect-auto">
+                <div className="relative overflow-hidden aspect-video lg:aspect-auto bg-white/5 flex items-center justify-center">
                   <img
                     src={project.image}
                     alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    className={`${
+                      project.id === 3 
+                        ? "w-32 h-32 object-contain filter brightness-0 invert" 
+                        : "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                    }`}
                   />
                   <div className="absolute inset-0 bg-gradient-to-r from-black/60 to-transparent" />
                   

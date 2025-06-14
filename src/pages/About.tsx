@@ -69,10 +69,14 @@ const About = () => {
               </div>
             </div>
 
-            {/* Profile Image Placeholder */}
+            {/* Profile Image */}
             <div className="relative mb-8">
-              <div className="w-64 h-64 bg-gradient-to-br from-purple-500/20 to-blue-500/20 rounded-2xl border border-white/10 flex items-center justify-center mx-auto lg:mx-0">
-                <User className="w-24 h-24 text-white/50" />
+              <div className="w-64 h-64 rounded-2xl border border-white/10 overflow-hidden mx-auto lg:mx-0">
+                <img 
+                  src="/lovable-uploads/29af58c9-a9ce-4589-9e3a-bcb265ee97e3.png" 
+                  alt="Zorto Richard Profile" 
+                  className="w-full h-full object-cover"
+                />
               </div>
               <div className="absolute -bottom-4 -right-4 w-24 h-24 bg-purple-500/20 rounded-full blur-xl" />
             </div>
