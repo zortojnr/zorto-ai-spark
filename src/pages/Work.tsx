@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { ExternalLink, Github, Clock } from 'lucide-react';
 
@@ -8,7 +7,7 @@ const Work = () => {
       id: 1,
       title: "ColAI – Collaborative AI",
       description: "Next-generation collaborative AI platform for team productivity and intelligent workflow automation.",
-      image: "https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3440&q=80",
+      image: "/lovable-uploads/f03cdc4c-8b23-4bb4-927d-a624f93ccc2c.png",
       tech: ["Python", "OpenAI API", "React", "FastAPI", "PostgreSQL"],
       status: "coming-soon",
       github: null,
@@ -68,7 +67,9 @@ const Work = () => {
                     src={project.image}
                     alt={project.title}
                     className={`${
-                      project.id === 3 
+                      project.id === 1 
+                        ? "w-48 h-48 object-contain" 
+                        : project.id === 3 
                         ? "w-32 h-32 object-contain filter brightness-0 invert" 
                         : "w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                     }`}
