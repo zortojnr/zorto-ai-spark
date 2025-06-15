@@ -87,7 +87,7 @@ const Home = () => {
             </h1>
             
             <p className={`text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl leading-relaxed transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.6s' }}>
-              Building intelligent, full-stack systems that solve real-world problems. 
+              I build intelligent, full-stack systems that solve real-world problems. 
               Specializing in AI integration, automation, and developer-focused solutions.
             </p>
 
