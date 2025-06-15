@@ -62,87 +62,105 @@ const Home = () => {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         {/* Hero Section */}
         <div className="min-h-screen flex items-center">
-          <div className={`max-w-4xl transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
-            {/* Location Badge */}
-            <div className={`inline-flex items-center px-4 py-2 bg-gradient-to-r from-slate-900/40 to-gray-800/40 border border-slate-600/30 rounded-full text-slate-300 text-sm mb-4 backdrop-blur-sm transition-all duration-700 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-900/20 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.1s' }}>
-              <MapPin className="w-4 h-4 mr-2" />
-              Yola, Nigeria
-            </div>
+          <div className="grid lg:grid-cols-2 gap-12 items-center w-full">
+            {/* Left Content */}
+            <div className={`max-w-4xl transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`}>
+              {/* Location Badge */}
+              <div className={`inline-flex items-center px-4 py-2 bg-gradient-to-r from-slate-900/40 to-gray-800/40 border border-slate-600/30 rounded-full text-slate-300 text-sm mb-4 backdrop-blur-sm transition-all duration-700 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-900/20 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.1s' }}>
+                <MapPin className="w-4 h-4 mr-2" />
+                Yola, Nigeria
+              </div>
 
-            <div className="mb-6">
-              <div className={`inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-900/30 to-slate-800/30 border border-blue-700/50 rounded-full text-blue-300 text-sm mb-8 backdrop-blur-sm transition-all duration-700 hover:from-blue-800/40 hover:to-slate-700/40 hover:border-blue-600/70 hover:shadow-xl hover:shadow-blue-900/30 hover:scale-105 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.2s' }}>
-                <Brain className="w-5 h-5 mr-3 animate-pulse" />
-                <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
-                AI Software Developer
-                <div className="ml-3 w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+              <div className="mb-6">
+                <div className={`inline-flex items-center px-6 py-3 bg-gradient-to-r from-blue-900/30 to-slate-800/30 border border-blue-700/50 rounded-full text-blue-300 text-sm mb-8 backdrop-blur-sm transition-all duration-700 hover:from-blue-800/40 hover:to-slate-700/40 hover:border-blue-600/70 hover:shadow-xl hover:shadow-blue-900/30 hover:scale-105 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.2s' }}>
+                  <Brain className="w-5 h-5 mr-3 animate-pulse" />
+                  <Sparkles className="w-4 h-4 mr-2 animate-pulse" />
+                  AI Software Developer
+                  <div className="ml-3 w-2 h-2 bg-green-400 rounded-full animate-pulse" />
+                </div>
               </div>
-            </div>
-            
-            <h1 className={`text-6xl md:text-8xl font-bold leading-tight mb-8 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.4s' }}>
-              <span className="text-white">Zorto</span>
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-slate-300 to-blue-500 animate-pulse">
-                Richard
-              </span>
-            </h1>
-            
-            <p className={`text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl leading-relaxed transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.6s' }}>
-              I build intelligent, full-stack systems that solve real-world problems. 
-              Specializing in AI integration, automation, and developer-focused solutions.
-            </p>
-
-            {/* Stats Section */}
-            <div className={`grid grid-cols-3 gap-8 mb-12 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.7s' }}>
-              <div className="text-center group">
-                <div className="text-3xl font-bold text-blue-400 group-hover:text-blue-300 transition-colors duration-300">{counters.projects}+</div>
-                <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Projects</div>
-              </div>
-              <div className="text-center group">
-                <div className="text-3xl font-bold text-slate-400 group-hover:text-slate-300 transition-colors duration-300">{counters.clients}+</div>
-                <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Clients</div>
-              </div>
-              <div className="text-center group">
-                <div className="text-3xl font-bold text-blue-300 group-hover:text-blue-200 transition-colors duration-300">{counters.experience}+</div>
-                <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Years</div>
-              </div>
-            </div>
-
-            {/* Skills Tags */}
-            <div className={`flex flex-wrap gap-3 mb-12 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.75s' }}>
-              {skills.map((skill, index) => (
-                <span
-                  key={skill}
-                  className="px-4 py-2 bg-gradient-to-r from-slate-800/50 to-gray-900/50 border border-slate-600/30 rounded-full text-sm text-slate-300 hover:border-blue-500/50 hover:text-blue-300 hover:scale-105 transition-all duration-300 cursor-default backdrop-blur-sm"
-                  style={{ animationDelay: `${index * 0.1}s` }}
-                >
-                  {skill}
-                </span>
-              ))}
-            </div>
-            
-            <div className={`flex flex-col sm:flex-row gap-6 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.8s' }}>
-              <Link
-                to="/work"
-                className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-800 via-blue-700 to-slate-700 text-white rounded-xl font-semibold text-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-900/50 overflow-hidden"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800 to-slate-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] group-hover:animate-pulse" />
-                <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-slate-600 rounded-xl blur opacity-0 group-hover:opacity-70 transition-opacity duration-500 -z-10" />
-                <Sparkles className="mr-3 w-5 h-5 relative z-10 animate-pulse" />
-                <span className="relative z-10">Explore My Work</span>
-                <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-2 relative z-10" />
-              </Link>
               
-              <Link
-                to="/about"
-                className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-gray-800 to-gray-900 border-2 border-slate-600/50 text-white rounded-xl font-semibold text-lg transition-all duration-500 hover:scale-105 hover:border-blue-500/70 hover:shadow-2xl hover:shadow-blue-900/30 overflow-hidden backdrop-blur-sm"
-              >
-                <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-slate-800/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-                <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.05)_50%,transparent_75%)] group-hover:animate-pulse" />
-                <div className="absolute -inset-1 bg-gradient-to-r from-slate-600/50 to-blue-600/50 rounded-xl blur opacity-0 group-hover:opacity-50 transition-opacity duration-500 -z-10" />
-                <span className="relative z-10">Learn About Me</span>
-                <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-2 relative z-10" />
-              </Link>
+              <h1 className={`text-6xl md:text-8xl font-bold leading-tight mb-8 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.4s' }}>
+                <span className="text-white">Zorto</span>
+                <br />
+                <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 via-slate-300 to-blue-500 animate-pulse">
+                  Richard
+                </span>
+              </h1>
+              
+              <p className={`text-xl md:text-2xl text-gray-300 mb-8 max-w-3xl leading-relaxed transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.6s' }}>
+                I build intelligent, full-stack systems that solve real-world problems. 
+                Specializing in AI integration, automation, and developer-focused solutions.
+              </p>
+
+              {/* Stats Section */}
+              <div className={`grid grid-cols-3 gap-8 mb-12 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.7s' }}>
+                <div className="text-center group">
+                  <div className="text-3xl font-bold text-blue-400 group-hover:text-blue-300 transition-colors duration-300">{counters.projects}+</div>
+                  <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Projects</div>
+                </div>
+                <div className="text-center group">
+                  <div className="text-3xl font-bold text-slate-400 group-hover:text-slate-300 transition-colors duration-300">{counters.clients}+</div>
+                  <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Clients</div>
+                </div>
+                <div className="text-center group">
+                  <div className="text-3xl font-bold text-blue-300 group-hover:text-blue-200 transition-colors duration-300">{counters.experience}+</div>
+                  <div className="text-sm text-gray-400 group-hover:text-gray-300 transition-colors duration-300">Years</div>
+                </div>
+              </div>
+
+              {/* Skills Tags */}
+              <div className={`flex flex-wrap gap-3 mb-12 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.75s' }}>
+                {skills.map((skill, index) => (
+                  <span
+                    key={skill}
+                    className="px-4 py-2 bg-gradient-to-r from-slate-800/50 to-gray-900/50 border border-slate-600/30 rounded-full text-sm text-slate-300 hover:border-blue-500/50 hover:text-blue-300 hover:scale-105 transition-all duration-300 cursor-default backdrop-blur-sm"
+                    style={{ animationDelay: `${index * 0.1}s` }}
+                  >
+                    {skill}
+                  </span>
+                ))}
+              </div>
+              
+              <div className={`flex flex-col sm:flex-row gap-6 transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.8s' }}>
+                <Link
+                  to="/work"
+                  className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-blue-800 via-blue-700 to-slate-700 text-white rounded-xl font-semibold text-lg transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-900/50 overflow-hidden"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-900 via-blue-800 to-slate-800 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.1)_50%,transparent_75%)] group-hover:animate-pulse" />
+                  <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 to-slate-600 rounded-xl blur opacity-0 group-hover:opacity-70 transition-opacity duration-500 -z-10" />
+                  <Sparkles className="mr-3 w-5 h-5 relative z-10 animate-pulse" />
+                  <span className="relative z-10">Explore My Work</span>
+                  <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-2 relative z-10" />
+                </Link>
+                
+                <Link
+                  to="/about"
+                  className="group relative inline-flex items-center px-8 py-4 bg-gradient-to-r from-gray-800 to-gray-900 border-2 border-slate-600/50 text-white rounded-xl font-semibold text-lg transition-all duration-500 hover:scale-105 hover:border-blue-500/70 hover:shadow-2xl hover:shadow-blue-900/30 overflow-hidden backdrop-blur-sm"
+                >
+                  <div className="absolute inset-0 bg-gradient-to-r from-blue-900/20 to-slate-800/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute inset-0 bg-[linear-gradient(45deg,transparent_25%,rgba(255,255,255,0.05)_50%,transparent_75%)] group-hover:animate-pulse" />
+                  <div className="absolute -inset-1 bg-gradient-to-r from-slate-600/50 to-blue-600/50 rounded-xl blur opacity-0 group-hover:opacity-50 transition-opacity duration-500 -z-10" />
+                  <span className="relative z-10">Learn About Me</span>
+                  <ArrowRight className="ml-3 w-5 h-5 transition-transform group-hover:translate-x-2 relative z-10" />
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Image */}
+            <div className={`flex justify-center lg:justify-end transition-all duration-1000 ${isVisible ? 'translate-y-0 opacity-100' : 'translate-y-10 opacity-0'}`} style={{ transitionDelay: '0.5s' }}>
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-blue-600/20 to-slate-600/20 rounded-3xl blur-2xl opacity-75 group-hover:opacity-100 transition-opacity duration-500"></div>
+                <div className="relative w-80 h-80 md:w-96 md:h-96 overflow-hidden rounded-2xl border border-blue-500/30 hover:border-blue-400/50 transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:shadow-blue-900/50">
+                  <img 
+                    src="/lovable-uploads/e2454556-9d96-4abe-a096-26b53ab3af46.png" 
+                    alt="AI Technology - Human and Robot Hand Connection"
+                    className="w-full h-full object-cover hover:scale-110 transition-transform duration-700"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-blue-900/20 via-transparent to-blue-800/10 opacity-50 group-hover:opacity-30 transition-opacity duration-500"></div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
