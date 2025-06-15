@@ -8,7 +8,7 @@ interface LayoutProps {
 
 const Layout = ({ children }: LayoutProps) => {
   return (
-    <div className="min-h-screen bg-black text-white">
+    <div className="min-h-screen bg-gray-950 text-white">
       <Navigation />
       <main className="pt-20">
         {children}
@@ -20,7 +20,7 @@ const Layout = ({ children }: LayoutProps) => {
           </div>
           <div className="flex items-center space-x-6">
             <span className="text-green-400 text-sm">● Available for Work</span>
-            <span className="text-white/60">Lagos, Nigeria</span>
+            <span className="text-white/60">Yola, Nigeria</span>
           </div>
         </div>
       </footer>

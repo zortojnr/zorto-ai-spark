@@ -36,20 +36,20 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black relative">
+    <div className="min-h-screen bg-gray-950 relative">
       {/* Grid Overlay */}
-      <div className="absolute inset-0 bg-[linear-gradient(rgba(255,255,255,0.03)_1px,transparent_1px),linear-gradient(90deg,rgba(255,255,255,0.03)_1px,transparent_1px)] bg-[size:50px_50px]" />
+      <div className="absolute inset-0 bg-[linear-gradient(rgba(30,58,138,0.08)_1px,transparent_1px),linear-gradient(90deg,rgba(30,58,138,0.08)_1px,transparent_1px)] bg-[size:50px_50px]" />
       
       {/* Gradient Orbs */}
-      <div className="absolute top-20 right-20 w-96 h-96 bg-purple-500/20 rounded-full blur-3xl" />
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-blue-500/20 rounded-full blur-3xl" />
+      <div className="absolute top-20 right-20 w-96 h-96 bg-blue-900/20 rounded-full blur-3xl animate-pulse" />
+      <div className="absolute bottom-20 left-20 w-96 h-96 bg-slate-800/15 rounded-full blur-3xl animate-pulse" />
       
       <div className="relative z-10 max-w-7xl mx-auto px-6 py-20">
         <div className="grid lg:grid-cols-2 gap-16 items-start">
           {/* Left Column - Contact Info */}
           <div>
             <h1 className="text-5xl md:text-6xl font-bold mb-6">
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-purple-400">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white via-blue-400 to-slate-400">
                 Let's Connect
               </span>
             </h1>
@@ -62,10 +62,10 @@ const Contact = () => {
             <div className="space-y-6 mb-12">
               <a
                 href="mailto:zortorichard27@gmail.com"
-                className="group flex items-center p-4 border border-white/10 rounded-xl hover:border-purple-500/50 transition-all duration-300 hover:bg-white/5"
+                className="group flex items-center p-4 border border-white/10 rounded-xl hover:border-blue-500/50 transition-all duration-300 hover:bg-white/5"
               >
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-purple-500/30 transition-colors">
-                  <Mail className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-500/30 transition-colors">
+                  <Mail className="w-6 h-6 text-blue-400" />
                 </div>
                 <div>
                   <div className="text-white font-medium">Email</div>
@@ -75,10 +75,10 @@ const Contact = () => {
 
               <a
                 href="tel:+2349066409957"
-                className="group flex items-center p-4 border border-white/10 rounded-xl hover:border-purple-500/50 transition-all duration-300 hover:bg-white/5"
+                className="group flex items-center p-4 border border-white/10 rounded-xl hover:border-blue-500/50 transition-all duration-300 hover:bg-white/5"
               >
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-purple-500/30 transition-colors">
-                  <Phone className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4 group-hover:bg-blue-500/30 transition-colors">
+                  <Phone className="w-6 h-6 text-blue-400" />
                 </div>
                 <div>
                   <div className="text-white font-medium">Phone</div>
@@ -87,12 +87,12 @@ const Contact = () => {
               </a>
 
               <div className="flex items-center p-4 border border-white/10 rounded-xl">
-                <div className="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center mr-4">
-                  <MapPin className="w-6 h-6 text-purple-400" />
+                <div className="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center mr-4">
+                  <MapPin className="w-6 h-6 text-blue-400" />
                 </div>
                 <div>
                   <div className="text-white font-medium">Location</div>
-                  <div className="text-white/70">Lagos, Nigeria</div>
+                  <div className="text-white/70">Yola, Nigeria</div>
                 </div>
               </div>
             </div>
@@ -103,19 +103,19 @@ const Contact = () => {
               <div className="flex space-x-4">
                 <a
                   href="#"
-                  className="w-12 h-12 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/50 transition-all duration-300"
+                  className="w-12 h-12 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center hover:bg-blue-500/20 hover:border-blue-500/50 transition-all duration-300"
                 >
                   <Github className="w-5 h-5 text-white" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/50 transition-all duration-300"
+                  className="w-12 h-12 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center hover:bg-blue-500/20 hover:border-blue-500/50 transition-all duration-300"
                 >
                   <Linkedin className="w-5 h-5 text-white" />
                 </a>
                 <a
                   href="#"
-                  className="w-12 h-12 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center hover:bg-purple-500/20 hover:border-purple-500/50 transition-all duration-300"
+                  className="w-12 h-12 bg-white/10 border border-white/20 rounded-lg flex items-center justify-center hover:bg-blue-500/20 hover:border-blue-500/50 transition-all duration-300"
                 >
                   <Twitter className="w-5 h-5 text-white" />
                 </a>
@@ -140,7 +140,7 @@ const Contact = () => {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300"
                     placeholder="Your name"
                   />
                 </div>
@@ -156,7 +156,7 @@ const Contact = () => {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300"
                     placeholder="your.email@example.com"
                   />
                 </div>
@@ -172,7 +172,7 @@ const Contact = () => {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-purple-500 focus:ring-1 focus:ring-purple-500 transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-white/50 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-all duration-300 resize-none"
                     placeholder="Tell me about your project or just say hello..."
                   />
                 </div>
@@ -184,8 +184,8 @@ const Contact = () => {
                     isSubmitted
                       ? 'bg-green-600 text-white'
                       : isSubmitting
-                      ? 'bg-purple-600/50 text-white/70 cursor-not-allowed'
-                      : 'bg-purple-600 hover:bg-purple-700 text-white hover:scale-105'
+                      ? 'bg-blue-600/50 text-white/70 cursor-not-allowed'
+                      : 'bg-gradient-to-r from-blue-600 to-slate-600 hover:from-blue-700 hover:to-slate-700 text-white hover:scale-105 hover:shadow-xl hover:shadow-blue-500/40'
                   }`}
                 >
                   {isSubmitted ? (
